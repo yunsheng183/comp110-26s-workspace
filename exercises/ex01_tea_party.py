@@ -21,11 +21,11 @@ def cost(tea_count: int, treat_count: int) -> float:
 def main_planner(guests: int) -> None:
     """The entrypoint of the program that tea party planning."""
 
-    print("A tea party for " + str(guests) + " people")
-    print("Tea Bag: " + (str(tea_bags(people=guests))))
+    print("A cozy tea party for " + str(guests) + " people!")
+    print("Tea Bags: " + (str(tea_bags(people=guests))))
     print("Treats: " + str(treats(people=guests)))
     print(
-        "Total Cost: "
+        "Cost: $"
         + str(
             cost(tea_count=tea_bags(people=guests), treat_count=treats(people=guests))
         )
