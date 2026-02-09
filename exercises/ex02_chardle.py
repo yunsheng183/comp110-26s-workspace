@@ -5,7 +5,7 @@ __author__ = "730947912"
 
 def input_word() -> str:
     """Prompt the user for a 5 character word."""
-    word: str = input("Enter a 5 character word: ")
+    word: str = input("Enter a 5-character word: ")
     if len(word) != 5:
         print("Error: Word must have 5 characters")
         exit()
@@ -21,7 +21,7 @@ def input_letter() -> str:
     return letter
 
 
-def contains_character(word: str, letter: str) -> None:
+def contains_char(word: str, letter: str) -> None:
     """Search the character in the word and count insrances."""
     print("Searching for " + letter + " in " + word)
     count: int = 0
@@ -52,7 +52,7 @@ def contains_character(word: str, letter: str) -> None:
 
 def main() -> None:
     """The entry of the progame."""
-    contains_character(word=input_word(), letter=input_letter())
+    contains_char(word=input_word(), letter=input_letter())
 
 
 if __name__ == "__main__":
