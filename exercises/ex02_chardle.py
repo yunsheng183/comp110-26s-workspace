@@ -7,7 +7,7 @@ def input_word() -> str:
     """Prompt the user for a 5 character word."""
     word: str = input("Enter a 5-character word: ")
     if len(word) != 5:
-        print("Error: Word must have 5 characters")
+        print("Error: Word must contain 5 characters.")
         exit()
     return word
 
@@ -16,7 +16,7 @@ def input_letter() -> str:
     """Collects a character from user."""
     letter = input("Enter a single character: ")
     if len(letter) != 1:
-        print("Error: Character muct be a single character.")
+        print("Error: Character must be a single character.")
         exit()
     return letter
 
@@ -47,7 +47,7 @@ def contains_char(word: str, letter: str) -> None:
     elif count == 1:
         print("1 instance of " + letter + " found in " + word)
     else:
-        print(str(count) + " instance of " + letter + " found in " + word)
+        print(str(count) + " instances of " + letter + " found in " + word)
 
 
 def main() -> None:
