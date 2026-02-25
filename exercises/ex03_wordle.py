@@ -51,7 +51,7 @@ def main(secret: str) -> None:
     while turn <= max_turns and not won:
         print(f"=== Turn{turn}/{max_turns}===")
         guess: str = input_guess(len(secret))
-        emoji_result: str = emjified(guess, secret)
+        emoji_result: str = emojified(guess, secret)
         print(emoji_result)
         if guess == secret:
             won = True
