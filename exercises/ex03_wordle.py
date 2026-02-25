@@ -43,24 +43,19 @@ def emojified(guess: str, secret: str) -> str:
 
 
 def main(secret: str) -> None:
-    """The entrypoint and mian loop."""
+    """The entrypoint and main loop."""
     turn: int = 1
     max_turns: int = 6
-    won: bool = False
-
-    while turn <= max_turns and not won:
-        print(f"=== Turn{turn}/{max_turns}===")
+    while turn <= max_turns:
+        print(f"=== Turn {turn}/{max_turns} ===")
         guess: str = input_guess(len(secret))
-        emoji_result: str = emojified(guess, secret)
-        print(emoji_result)
+        print(emojified(guess, secret))
         if guess == secret:
-            won = True
-        else:
-            turn += 1
-    if won:
-        print(f"You won in {turn}/{max_turns} turns!")
-    else:
-        print("X/6 - Sorry, try again tomorrow!")
+            print(f"You won in {turn}/{max_turns} turns!")
+            return
+        turn += 1
+
+    print("X/6 - Sorry, try again")
 
 
 if __name__ == "__main__":
