@@ -55,7 +55,7 @@ def main(secret: str) -> None:
             return
         turn += 1
 
-    print("X/6 - Sorry, try again")
+    print("X/6 - Sorry, try again tomorrow!")
 
 
 if __name__ == "__main__":
