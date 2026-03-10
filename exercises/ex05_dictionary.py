@@ -21,7 +21,7 @@ def favorite_color(colors: dict[str, str]) -> str:
         if color in color_count:
             color_count[color] += 1
         else:
-            color_cpunt[color] = 1
+            color_count[color] = 1
     most_color: str = ""
     most_count: int = 0
 
